@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+</head>
+
+    
+<body>
+    
+    <section class="main-section">
+        <header>
+        <h1>We provide you the help that you need</h1>
+
+    <div class="container-title">
+        <h2>Quick check of hotlines</h2>
+    </div>
+       
+</header>
+        <div class="main-message-container">
+            <h1> Welcome to the<br> Mental Health Support</h1>
+        </div>
+        <div class="long-message-container">
+             <p> Taking the first step toward support can be hard, but you are never without options.<br> Explore free hotlines, local support groups, and mental health tools designed to meet you exactly where you are today. Reach out, connect, and take the next step at your own pace.</p>
+        </div>
+       
+    </section>
+  
+
+
+
+    <section id="contacts">
+        
+    <div class="main-message">
+    <h1>What feels most doable right now?</h1>
+    <p>free, confidential support tailored to your comfort level.</p>
+    </div>
+    
+        <div class="hotlines">
+            <ul class="contact-list">
+               <li>
+               <h2 class="contact-title">National Center for Mental Health (NCMH) Crisis Hotline </h2>
+               <p>The government's 24/7 psychiatric hotline for immediate crisis intervention, psychological first aid, and public hospital referrals.</p>
+                <button id="openDialogBtn" type="button" class="openDialogBtn">Contacts</button>
+                
+                       <dialog id="myDialog" class="contact-dialog">
+                        <div class="container-number">
+                             <div>   
+                                 <p>Contact number: <a href="tel:1-800-273-8255">1-800-273-8255</a></p>
+                             </div>
+                              <div>
+                                 <p>Contact number: <a href="tel:1-800-273-8255">1-800-273-8255</a></p>
+                             </div>
+                             <div class="landline">
+                                 <p>Landline:<a href="tel:1-800-273-8255">1-800-273-8255</a></p>
+                             </div>
+                        </div>      
+                              
+                              <button id="closeDialogBtn" class="closeDialogBtn" type="button">Close</button>
+                        </dialog>
+                </li>
+
+
+
+            </li> 
+
+               <li>
+                <h2 class="contact-title">In Touch Community Services (Crisis Line) </h2>
+               <p>A 24/7 non-profit helpline offering empathetic crisis listening and emotional support for personal distress, grief, and relationship struggles.</p>
+                 <button id="openDialogBtn" type="button" class="openDialogBtn">Contacts</button>
+                      <dialog id="myDialog" class="contact-dialog">
+                        <div class="container-number">
+                             <div>   
+                                 <p>Contact number: <a href="tel:1-800-273-8255">0998-841-0053</a></p>
+                             </div>
+                              <div>
+                                 <p>Contact number: <a href="tel:0917-863-1136">0917-863-1136</a></p>
+                             </div>
+                             <div class="landline">
+                                 <p>Landline: <a href="tel:(02) 8893-7603 / (02) 8893-1893">(02) 8893-7603 / (02) 8893-1893</a></p>
+                             </div>
+                        </div>      
+                              
+                              <button id="closeDialogBtn" class="closeDialogBtn" type="button">Close</button>
+                        </dialog>
+                       
+            </li>
+
+               <li>
+                <h2 class="contact-title">Hopeline Philippines </h2>
+               <p>A 24/7 suicide prevention and crisis hotline providing immediate, confidential support for individuals facing severe emotional pain and overwhelming distress.</p>
+                 <button id="openDialogBtn" type="button" class="openDialogBtn">Contacts</button>
+                
+                       <dialog id="myDialog" class="contact-dialog">
+                             <div class="container-number">
+                             <div>   
+                                 <p>Contact number: <a href="tel:1-800-273-8255">0917-558-4673</a></p>
+                             </div>
+                              <div>
+                                 <p>Contact number: <a href="tel:1-800-273-8255">0918-873-4673</a></p>
+                             </div>
+                             <div class="landline">
+                                 <p>Landline: <a href="tel:1-800-273-8255">(02) 8804-4673</a></p>
+                             </div>
+                        </div>      
+                              
+                              <button id="closeDialogBtn" class="closeDialogBtn" type="button">Close</button>
+                        </dialog>
+            </li> 
+
+             <li>
+                <h2 class="contact-title">ITawag Paglaum Centro Bisaya</h2>
+               <p>A 24/7 emotional support and crisis intervention line accessible nationwide, with specialized support for Bisaya and other regional dialect speakers  .</p>
+                       <button id="openDialogBtn" type="button" class="openDialogBtn">Contacts</button>
+                
+                       <dialog id="myDialog" class="contact-dialog">
+                              <div class="container-number">
+                             <div>   
+                                 <p>Contact number: <a href="tel:1-800-273-8255">0966-467-9626</a></p>
+                             </div>
+                              <div>
+                                 <p>Contact number: <a href="tel:1-800-273-8255">0939-937-5433</a></p>
+                             </div>
+                             <div class="landline">
+                                 <p>Landline: <a href="tel:1-800-273-8255">1-800-273-8255</a></p>
+                             </div>
+                        </div>      
+                              
+                              <button id="closeDialogBtn" class="closeDialogBtn" type="button">Close</button>
+                        </dialog>
+             </li> 
+
+            <script>
+                document.querySelectorAll('.openDialogBtn').forEach((openBtn) => {
+                    const contactCard = openBtn.closest('li');
+                    const dialog = contactCard.querySelector('dialog');
+                    const closeBtn = dialog.querySelector('.closeDialogBtn');
+
+                    openBtn.addEventListener('click', () => {
+                        dialog.showModal();
+                    });
+
+                    closeBtn.addEventListener('click', () => {
+                        dialog.close();
+                    });
+                });
+            </script>
+            </ul>
+    </div>
+    </section>
+    
+</body>
+
+<footer>
+
+</footer>
+</html>
